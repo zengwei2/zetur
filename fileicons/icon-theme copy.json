@@ -1,0 +1,40 @@
+{
+  "fonts": [
+		{
+			"id": "seti",
+			"src": [
+				{
+					"path": "./seti.woff",
+					"format": "woff"
+				}
+			],
+			"weight": "normal",
+			"style": "normal",
+			"size": "150%"
+		}
+	],
+  "iconDefinitions": {
+    "_zw": {
+      "fontCharacter": "\\E00E",
+			"fontColor": "#cc3e44"
+			// "fontCharacter": "\\E09C",
+			// "fontColor": "#8dc149"
+		},
+    "_zw_light": {
+      "fontCharacter": "\\E00E",
+			"fontColor": "#b8383d"
+			// "fontCharacter": "\\E09C",
+			// "fontColor": "#7fae42"
+		},
+  },
+  "fileExtensions": {
+    "zw": "_zw"
+  },
+  "light": {
+    "file": "_default_light",
+    "fileExtensions": {
+      "zw": "_zw_light",
+    }
+  },
+  "highContrast": {}
+}

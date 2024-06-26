@@ -1,0 +1,31 @@
+{
+  "name": "vti",
+  "description": "Vetur Terminal Interface",
+  "version": "0.1.11",
+  "main": "./dist/cli.js",
+  "bin": "./bin/vti",
+  "author": "Pine Wu <octref@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^9.4.1",
+    "vls": "^0.8.5"
+  },
+  "scripts": {
+    "compile": "rollup -c rollup.config.js",
+    "watch": "rollup -c rollup.config.js -w"
+  },
+  "devDependencies": {
+    "@babel/code-frame": "^7.18.6",
+    "@types/babel__code-frame": "^7.0.3",
+    "@types/glob": "^8.0.1",
+    "chalk": "^4.1.2",
+    "glob": "^8.1.0",
+    "rollup": "^3.17.0",
+    "typescript": "^4.9.5",
+    "vscode-languageclient": "^7.0.0",
+    "vscode-languageserver": "^7.0.0",
+    "vscode-languageserver-protocol": "^3.16.0",
+    "vscode-languageserver-types": "^3.17.2",
+    "vscode-uri": "^3.0.7"
+  }
+}

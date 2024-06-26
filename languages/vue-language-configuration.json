@@ -1,0 +1,49 @@
+{
+  // 快捷键 ctrl + / 注释
+  "comments": {
+    // symbol used for single line comment. Remove this entry if your language does not support line comments
+    "lineComment": "//",
+    // symbols used for start and end a block comment. Remove this entry if your language does not support block comments
+    "blockComment": [ "/*", "*/" ]
+  },
+  // symbols used as brackets
+  // 括号高亮
+  "brackets": [
+    ["{", "}"],
+    ["[", "]"],
+    ["(", ")"]
+  ],
+  // symbols that are auto closed when typing
+  // 自动闭合，输入 ', 会自动闭合为 ''，并且光标在引号中间
+  // 用户可以使用 editor.autoClosingQuotes 和 editor.autoClosingBrackets 设置自动闭合符号的行为。
+  "autoClosingPairs": [
+		{ "open": "{", "close": "}" },
+		{ "open": "[", "close": "]" },
+		{ "open": "(", "close": ")" },
+		{ "open": "\"", "close": "\"", "notIn": ["string"] },
+		{ "open": "'", "close": "'", "notIn": ["string", "comment"] },
+		{ "open": "`", "close": "`", "notIn": ["string", "comment"] },
+		{ "open": "/**", "close": " */", "notIn": ["string"] }
+  ],
+  // symbols that that can be used to surround a selection
+  // 自动环绕符号
+  // ( 当你选择了一堆文本然后输入左括号时，VS Code会对选中内容外围加上对应的括号。)
+  "surroundingPairs": [
+    ["{", "}"],
+    ["[", "]"],
+    ["(", ")"],
+    ["\"", "\""],
+    ["'", "'"],
+    ["`", "`"],
+  ],
+  // 代码折叠：( 3种折叠类型 )
+  //   1. 缩进折叠( 这是 VS Code 中默认的缩进行为，当两行内容有着相同的缩进级别时，你就可以看到折叠标记了。 ) 
+  //   2. 语言配置折叠：( 当 VS Code 发现 folding.markers 同时定义了 start 和 end 时，对应区域内就会出现折叠标记，下面遇到了 template、script、style 标签就会折叠。)
+  //   3. 语言服务器折叠: ( 语言服务器获取到 textDocument/foldingRange 请求中的代码折叠列表数据，VS Code 之后根据这份列表创建折叠标记 )
+  "folding": {
+    "markers": {
+      "start": "^<(template|style|script)[^>]*>",
+      "end": "^</(template|style|script)>"
+    }
+  }
+}
