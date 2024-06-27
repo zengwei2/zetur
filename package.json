@@ -3,7 +3,7 @@
   "displayName": "zeng zetur",
   "description": "Vue tooling for VS Code",
   "icon": "asset/vue.png",
-  "version": "0.37.4",
+  "version": "0.37.5",
   "publisher": "zeng-first",
   "scripts": {
     "postinstall": "run-s install:*",

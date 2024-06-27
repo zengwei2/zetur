@@ -17,7 +17,7 @@ dist-test/
 server/dist-test/
 
 *.zip
-*.vsix
+# *.vsix
 
 .nyc_output
 coverage.lcov

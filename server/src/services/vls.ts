@@ -689,12 +689,13 @@ export class VLS {
     };
   }
 
+  // uri: 'file:///c%3A/Users/zengwei/Desktop/vue/Vue3/Vue3-my/inedx.zw'
   async onSemanticToken(params: SemanticTokensParams | SemanticTokensRangeParams): Promise<SemanticTokens> {
     const project = await this.getProjectService(params.textDocument.uri);
 
-    return project?.onSemanticTokens(params) ?? { data: [] as number[] };
+    // return project?.onSemanticTokens(params) ?? { data: [] as number[] };
     // onSemanticTokens 设置 .zw 文件后缀有问题
-    // return { data: [] };
+    return { data: [] };
   }
 
   private triggerValidation(textDocument: TextDocument): void {
@@ -794,6 +795,7 @@ export class VLS {
         commands: []
       },
       foldingRangeProvider: true,
+      // 语义分词供应器( 语义高亮 )
       semanticTokensProvider: {
         range: true,
         full: true,

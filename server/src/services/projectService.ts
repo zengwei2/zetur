@@ -359,6 +359,7 @@ export async function createProjectService(
 
       return textDocumentEdit ?? [];
     },
+    // 语义高亮
     async onSemanticTokens(params: SemanticTokensParams | SemanticTokensRangeParams) {
       if (!env.getConfig().vetur.languageFeatures.semanticTokens) {
         return {
@@ -366,7 +367,7 @@ export async function createProjectService(
         };
       }
 
-      const { textDocument } = params;
+      const { textDocument } = params; // rui: { "file:///c%3A/Users/zengwei/Desktop/vue/Vue3/Vue3-my/inedx.zw" }
       const range = 'range' in params ? params.range : undefined;
       const doc = documentService.getDocument(textDocument.uri)!;
       const modes = languageModes.getAllLanguageModeRangesInDocument(doc);
